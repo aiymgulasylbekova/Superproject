@@ -1,0 +1,93 @@
+body{
+    margin: 0; /*  Свойство, которым можно отодвинуть элемент от соседей*/
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    line-height: 1.6; /*межстрочный отступ*/
+    color: #333;
+}
+
+
+*,
+*:before,
+*:after{
+    box-sizing: border-box; /*все элементы в HTML не будут добавлять внутренние отступы и границы к итоговой ширине */
+}
+
+h1, h1, h3, h4, h5, h6{
+    margin:0;
+}
+/*контейнер с лого */
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto
+}
+
+/*INTRO основной контейнер */
+.intro{
+    width: 100%;
+    height: 100vh; /*100% процентов экрана */
+    background: url("C:/Users/Asus/Desktop/дп/Superproject/assets/images/Kemel.png") center no-repeat;
+    background-size: 1000px; /* занимает весь площедь экрана */
+}
+
+/*шапка */
+.header{
+    width: 100%;
+    padding-top: 30px;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 1000;
+}
+
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__logo{
+    font-size: 30px;
+    font-weight: 700;
+    color:#e72b2b;
+}
+
+/*навигация в шапке */
+.nav{
+    font-size:14px;
+    text-transform:uppercase;
+}
+.nav__link{
+    display:inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    color:#080808;
+    text-decoration: none;
+    position: relative;
+
+    transition: color .1s linear; /*чтобы плавно менялся цвет шапкадагы басканда озгеретын*/
+}
+
+.nav__link:after{
+    content:"";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color:#e72b2b;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+
+    transition: opasity .1s linear;
+}
+
+.nav__link:hover{
+    color:#e72b2b;
+}
+
+.nav__link:hover:after{
+    opacity: 1;
+}

@@ -25,11 +25,30 @@ h1, h1, h3, h4, h5, h6{
 
 /*INTRO основной контейнер */
 .intro{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
     height: 100vh; /*100% процентов экрана */
     background: url("C:/Users/Asus/Desktop/дп/Superproject/assets/images/Kemel.png") center no-repeat;
     background-size: 1000px; /* занимает весь площедь экрана */
 }
+
+.intro_title{
+    font-size: 100px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1;
+}
+
+.intro_inner{
+    color:#e72b2b;
+    width: 100%;
+    max-width: 880px;
+    margin:0 auto;
+}
+
+
 
 /*шапка */
 .header{
